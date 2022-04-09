@@ -27,10 +27,21 @@ const getOneById = async (id) => {
   return result;
 };
 
+const update = async (id, body) => {
+  const headers = {
+    headers: { 'content-type': 'application/json' },
+    method: 'PUT',
+    body: JSON.stringify(body),
+  };
+
+  await fetch(`https://crudcrud.com/api/${crudCrudId}/stock/${id}`, headers);
+};
+
 const Stock = {
   insert,
   getAll,
   getOneById,
+  update,
 }
 
 export default Stock;
