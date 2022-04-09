@@ -13,8 +13,16 @@ const insert = async (body) => {
   return result;
 };
 
+const getAll = async () => {
+  const result = await fetch(`https://crudcrud.com/api/${crudCrudId}/stock`)
+    .then((data) => data.json());
+
+  return result;
+};
+
 const Stock = {
   insert,
+  getAll,
 }
 
 export default Stock;
