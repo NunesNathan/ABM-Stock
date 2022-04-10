@@ -15,8 +15,8 @@ const insert = async (body) => {
 
 const getAll = async () => {
   const result = await fetch(`https://crudcrud.com/api/${crudCrudId}/stock`)
-  .then((data) => data.json());
-  
+    .then((data) => data.json());
+
   return result;
 };
 
@@ -51,7 +51,7 @@ const Stock = {
   getAll,
   getOneById,
   update,
-  remove,
-}
+  delete: remove,
+};
 
 export default Stock;
