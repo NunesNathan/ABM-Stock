@@ -122,10 +122,10 @@ export default function ItemForm() {
         />
       </Form.Group>
       <Form.Group>
-        <Form.Label onChange={({ target: { value } }) => setActive(value)}>
+        <Form.Label onChange={({ target: { value } }) => setActive(value === 'true')}>
           Is active
-          <Form.Check name="active" defaultChecked label="false" type="radio" id="false-active" />
-          <Form.Check name="active" label="true" type="radio" id="true-active" />
+          <Form.Check name="active" checked={!active} value={false} label="false" type="radio" id="false-active" />
+          <Form.Check name="active" checked={active} value label="true" type="radio" id="true-active" />
         </Form.Label>
       </Form.Group>
       <Button type="submit" onClick={(e) => handleSubmit(e)}>
