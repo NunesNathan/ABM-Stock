@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import PropType from 'prop-types';
 import { Table, Button, Pagination } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
-import RegisterProductButton from '../../../components/RegisterProductButton';
 import Stock from '../../../services/api';
+import RegisterProductButton from '../../../components/RegisterProductButton';
 import './index.css';
 
 const tableHeaders = [
