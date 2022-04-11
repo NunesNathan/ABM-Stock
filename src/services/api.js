@@ -1,4 +1,4 @@
-const crudCrudId = '90ab247f689545e2a5133651397b4823';
+const crudCrudId = '2261f679f62e4ca4904cc4d4d3d51926';
 
 const insert = async (body) => {
   const headers = {
