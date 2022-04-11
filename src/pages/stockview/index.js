@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
+import { useHistory } from 'react-router-dom';
+import { Table, Button } from 'react-bootstrap';
 import Stock from '../../services/api';
 
 const tableHeaders = [
@@ -10,6 +10,8 @@ const tableHeaders = [
 
 export default function StockView() {
   const [items, setItems] = useState([]);
+
+  const history = useHistory();
 
   useEffect(async () => {
     setItems(await Stock.getAll());
@@ -27,6 +29,14 @@ export default function StockView() {
           {tableHeaders.map((head) => (
             <th key={head}>{head}</th>
           ))}
+          <th colSpan={2}>
+            <Button
+              className="w-100"
+              onClick={() => history.push('/item')}
+            >
+              Register a product!
+            </Button>
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -48,12 +58,20 @@ export default function StockView() {
                 )}
               </td>
               <td>
-                <Link to={`/item/${id}`}>Select</Link>
+                <Button
+                  className="w-100"
+                  onClick={() => history.push(`/item/${id}`)}
+                >
+                  Select
+                </Button>
               </td>
               <td>
-                <button type="button" onClick={() => deleteItem(id)}>
+                <Button
+                  className="w-100"
+                  onClick={() => deleteItem(id)}
+                >
                   Delete
-                </button>
+                </Button>
               </td>
             </tr>
           ))
