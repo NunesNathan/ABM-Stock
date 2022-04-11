@@ -1,0 +1,22 @@
+* {
+  color: #0093C7;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: rgb(155, 219, 245);
+}
+
+iframe {
+  pointer-events: none;
+}
+
+#root {
+  padding: 0 5vw;
+  display: grid;
+  min-height: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 15vh 80vh 5vh;
+  grid-template-areas: "header" "main" "footer";
+}
+
