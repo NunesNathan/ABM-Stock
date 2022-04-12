@@ -1,4 +1,4 @@
-const crudCrudId = 'ab080ad1daaf417087ef73c755447c0d';
+const crudCrudId = '916f5d85ecd8400c8dbc47c8bf444736';
 const badRequest = 'Bad Request - Check your crudcrud id';
 
 const insert = async (body) => {

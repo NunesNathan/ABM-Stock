@@ -19,7 +19,7 @@ export default function StockTable({ items, setItems }) {
 
   useEffect(() => {
     setPages(Math.ceil(items.length / 7));
-  }, []);
+  }, [items]);
 
   const deleteItem = async (id) => {
     await Stock.delete(id);

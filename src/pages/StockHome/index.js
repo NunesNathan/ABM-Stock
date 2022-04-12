@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import RegisterProductButton from '../../components/RegisterProductButton';
+import { Spinner } from 'react-bootstrap';
 import Stock from '../../services/api';
+import RegisterProductButton from '../../components/RegisterProductButton';
 import StockTable from './StockTable';
 import './index.css';
 
 export default function StockHome() {
-  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [items, setItems] = useState();
 
   useEffect(async () => {
     setItems(await Stock.getAll());
+    setLoading(false);
   }, []);
 
   const verifyItems = () => {
@@ -36,7 +39,11 @@ export default function StockHome() {
 
   return (
     <main>
-      {verifyItems()}
+      {loading ? (
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      ) : verifyItems()}
     </main>
   );
 }

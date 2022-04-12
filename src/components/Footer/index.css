@@ -12,3 +12,9 @@ footer span {
      display: none;
    }
 }
+
+@media screen and (max-width: 578px) {
+  footer {
+    display: none;
+  }
+}
