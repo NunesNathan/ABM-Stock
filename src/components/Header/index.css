@@ -1,0 +1,13 @@
+header {
+  grid-area: "header";
+}
+
+header a {
+  color: #213170;
+  font-size: 4rem;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #0093C7;
+}

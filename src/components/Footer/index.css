@@ -1,0 +1,20 @@
+footer {
+  grid-area: "footer";
+  text-align: center;
+}
+
+footer span {
+  color: #213170;
+}
+
+@media screen and (max-height: 648px) {
+   footer {
+     display: none;
+   }
+}
+
+@media screen and (max-width: 578px) {
+  footer {
+    display: none;
+  }
+}

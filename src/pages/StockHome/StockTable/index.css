@@ -1,0 +1,22 @@
+main table {
+  min-height: 77.5vh;
+}
+
+ul.pagination {
+  margin: 0 47%;
+}
+
+ul.pagination li a {
+  background-color: #213170;
+  border: none;
+}
+
+ul.pagination li a:is(:hover, :active, :focus, :focus-visible) {
+  background-color: #213170;
+  border: none;
+  box-shadow: none;
+}
+
+.fa-solid {
+  font-size: x-large;
+}
